@@ -27,9 +27,9 @@ Think about which debugging methods you found most useful and how you might appl
 //console.log("Welcome to the bootcamp
 
 // What’s Wrong?
-// No closing paraentheses, quotation mark or semicolon.
 
-//Proposed correction: 
+//Syntax error. There is no closing quotation markor parentheses at the end of the console.log(). Add a quotation mark and parentheses at the end. Solution below: 
+
 console.log("Welcome to the bootcamp");
 
 // Program B
@@ -43,22 +43,21 @@ console.log("Welcome to the bootcamp");
 // }
 
 // What’s Wrong?
-// The last number in the array is written as a string, rather than a number
 
-//Proposed correction: 
+// Logic error. The final value in the array is a string, not a number. Correct the code like this: 
+
 let numbers = [2, 4, 8];
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-
 // Program C (Logic Error)
 // Description:
 // This snippet of code is supposed to check if a given number is prime (i.e., divisible only by 1 and itself). However, it incorrectly marks some numbers as prime or not prime.
 
 // function isPrime(num) {
-//   if (num > 2) return false;
+//   if (num < 2) return false;
 //   for (let i = 2; i < num; i++) {
 //     if (num % i === 0) {
 //       return true;  // Supposed to indicate num is NOT prime
@@ -70,12 +69,11 @@ for (let i = 0; i < numbers.length; i++) {
 // console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
-// The line if (num > 2) return false; states that it should return FALSE if the number is greater than 2, when it should really return TRUE.
 
-//Proposed correction
+// Logic error. I'm not entirely sure but I think that the return values toward the bottom need to be switched, like this: 
 
 function isPrime(num) {
-  if (num > 2) return true;
+  if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
       return true;  // Supposed to indicate num is NOT prime
